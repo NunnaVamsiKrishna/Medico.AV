@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+.home-list{
+    width: 120px;
+    height: 100vh;
+    background-color: rgb(91, 180, 196);
+    float: left;
+}
+.bars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    color: aliceblue;
+}
+.home-list ul{
+    padding: 25px;
+    position: fixed;
+    bottom: 5%;
+    text-align: center;
+    list-style: none;
+}
+.home-list a{
+    color: aliceblue;
+}
+.home-list ul li{
+    color: aliceblue;
+    padding: 20px;
+    cursor: pointer;
+}
+.home-body{
+    float: right;
+    width: 92%;
+}
+.home-body ul{
+    display: flex;
+    padding: 20px;
+}
+.home-body ul li{
+    list-style: none;
+    padding: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.home-name{
+    color: rgb(91, 180, 196);
+}
+.home-desc{
+    float: left;
+    width: 40%;
+}
+.home-title{
+    font-size: 60px;
+    padding: 20px;
+    margin-left: 40px;
+}
+.home-tag{
+    color: rgb(91, 180, 196);
+    padding: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.home-body{
+    position: fixed;
+    left: 120px;
+}
+.home-desc p{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+button {
+	border-radius: 20px;
+	border: 1px solid rgb(91, 180, 196);
+	background-color: rgb(91, 180, 196);;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+.home-image{
+    float: right;
+    width: 600px;
+    padding: 80px;
+}
