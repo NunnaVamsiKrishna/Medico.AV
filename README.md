@@ -1,3 +1,3 @@
 # Medico.AV
 
-Made some edits
+This is our Skill Development Project 2
