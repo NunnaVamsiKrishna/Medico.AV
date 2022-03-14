@@ -1,0 +1,79 @@
+
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+   *{
+       list-style: none;
+       text-decoration: none;
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Open Sans', sans-serif;
+   }
+   body{
+       background: #f5f6fa;
+   }
+   
+   .wrapper .sidebar{
+       background: rgb(38, 150, 170);
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 22%;
+       height: 100%;
+       padding: 20px 0;
+       transition: all 0.5s ease;
+   }
+   
+   .wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid rgb(38, 150, 170);
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: rgb(38, 150, 170);
+    border-radius: 15px;
+    background:white;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: rgb(38, 150, 170);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: rgb(123, 55, 168);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}

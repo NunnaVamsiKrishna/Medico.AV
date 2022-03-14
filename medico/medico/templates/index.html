@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title>medico.av</title>
+</head>
+<body>
+    <div class="home-list">
+        <div class="bars"><i class="fa fa-3x fa-bars"></i></div>
+        <ul>
+            <li><a href="https://github.com/Audacity21/Medical-Assistant" target="_blank"><i class="fa-brands fa-2x fa-linkedin"></i></a></li>
+            <li><i class="fa-brands fa-2x fa-github"></i></li>
+            <li><i class="fa-solid fa-2x fa-address-book"></i></li>
+            <li><i class="fa-brands fa-2x fa-teamspeak"></i></li>
+        </ul>
+    </div>
+    <div class="home-body">
+        <div class="home-header">
+            <ul>
+                <li class="home-name">HOME</li>
+                <li>TOOLS</li>
+                <li>CONTACT</li>
+                <li>HOW TO USE</li>
+            </ul>
+        </div>
+        <div class="home-body">
+            <div class="home-desc">
+                <div class="home-title">medico.av</div>
+                <div class="home-tag">Your AI Hospital</div>
+                <p>Use our AI based application which performs everything that happens at a hospital through a web app. Check your symptoms to predict any diseases so that you can go for early treatment. We also have a huge database of specialist doctors whom you can contact through our app itself. The app contains a variety of tools which you can use for small checkups. Not to forget the fact that we can let you contact a huge number of hospitals withinn seconds. Hope you have a great time here.</p>
+                <a href="{% url 'loginpage' %}"><button>Login</button></a>
+            </div>
+            <img class="home-image" src="https://img.freepik.com/free-vector/flat-hand-drawn-patient-taking-medical-examination_52683-57829.jpg?t=st=1646238833~exp=1646239433~hmac=f71a8c42667d73cca9b9453d2e6ed2d11b8e91787e63070677777b17d51937cb&w=1060" alt="site logo">
+        </div>
+    </div>
+</body>
+</html>
