@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medico.av</title>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>Welcome!</h1>
+            <p>Please Enter your credentials to sign up</p>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button><a href="{% url 'dashpage' %}">Sign Up</a></button>
+            <p>Already have an account? <a href="{% url 'loginpage' %}">Login</a></p>
+        </div>
+     </div>
+</body>
+</html>
