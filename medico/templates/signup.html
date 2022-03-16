@@ -11,15 +11,21 @@
 </head>
 <body>
     <div class="login-container">
-        <div class="login-form">
+        <form method="post" action="" class="login-form">
+            {% csrf_token %}
             <h1>Welcome!</h1>
             <p>Please Enter your credentials to sign up</p>
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button><a href="{% url 'dashpage' %}">Sign Up</a></button>
+            <div class="form-flex">
+                <input type="text" name="first_name" class="form-name" placeholder="First Name" />
+                <input type="text" name="last_name" placeholder="Last Name" />
+            </div>
+            <input type="text" name="username" placeholder="Username" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password1" placeholder="Password" />
+            <input type="password" name="password2" placeholder="Confirm Password" />
+            <button type="submit" value="submit">Sign Up</button>
             <p>Already have an account? <a href="{% url 'loginpage' %}">Login</a></p>
-        </div>
+        </form>
      </div>
 </body>
 </html>
