@@ -11,7 +11,15 @@
 </head>
 <body>
     <div class="home-list">
-        <div class="title">medico.av</div>
+        <div class="title">
+                {% if user.is_authenticated %}
+                <li>Hello, {{ user.first_name }}  </li>
+                <a href="{% url 'logoutpage' %}"><button>Logout</button></a>
+
+                {% else %}
+                 <button><a href="{% url 'loginpage' %}">Login</a></button>
+                 {% endif %}
+        </div>
         <div class="bars"><i class="fa fa-3x fa-bars"></i></div>
         <ul>
             <li>Profile</li>

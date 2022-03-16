@@ -87,6 +87,7 @@ button {
 	transition: transform 80ms ease-in;
     margin-left: 200px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 button:active {

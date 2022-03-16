@@ -17,7 +17,7 @@ from tkinter import N
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path
-from .views import index,login,signup,dash
+from .views import index,login,signup,dash,logout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,5 @@ urlpatterns = [
     path('login/',login,name='loginpage'),
     path('signup/',signup,name='signuppage'),
     path('dashboard/',dash,name='dashpage'),
+    path('logout/',logout,name='logoutpage'),
 ]

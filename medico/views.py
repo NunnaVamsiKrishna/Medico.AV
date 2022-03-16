@@ -16,7 +16,6 @@ def signup(request):
 
     if password1 == password2:
       if User.objects.filter(username=username).exists() and User.objects.filter(email=email).exists():
-        #messages.info(request,'Username or email already taken')
         print('Username or email already taken')
         return redirect('signuppage')
 
@@ -40,10 +39,13 @@ def login(request):
       return redirect('dashpage')
 
     else:
-      #messages.info(request, 'Invalid credentials')
       print('Invalid credentials')
       return redirect('loginpage')
 
 
   else:
     return render(request, 'login.html')
+
+def logout(request):
+	auth.logout(request)
+	return redirect('/')
