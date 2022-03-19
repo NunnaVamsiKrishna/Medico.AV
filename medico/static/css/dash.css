@@ -3,32 +3,17 @@
     padding: 0;
     font-family: 'Fredoka', sans-serif;
 }
-.title{
-    display: inline-block;
-    color: aliceblue;
-    font-size: 36px;
-    margin-top: 30px;
-}
 .home-list{
-    width: 320px;
+    width: 260px;
     height: 100vh;
     background-color: rgb(91, 180, 196);
     float: left;
 }
-.bars{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    color: aliceblue;
-}
 .home-list ul{
-    padding: 25px;
-    position: fixed;
     bottom: 30%;
-    text-align: center;
+    text-align: left;
     list-style: none;
-    margin-left: 40px;
+    margin-top: 60px;
 }
 .home-list ul li:hover{
     background-color: rgb(72, 132, 143);
@@ -84,10 +69,24 @@
     font-size: 20px;
     margin-left: 50px;
 }
+.dash-title {
+    position: absolute;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    bottom: 30px;
+    width: 180px;
+    font-size: 20px;
+}
+.fa-solid  {
+    color: rgb(131, 55, 55);
+    cursor: pointer;
+}
 button {
 	border-radius: 20px;
-	border: 1px solid rgb(91, 180, 196);
-	background-color: rgb(91, 180, 196);;
+	border: 1px solid rgb(179, 71, 77);
+	background-color: rgb(179, 71, 77);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -95,6 +94,10 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
-    margin-left: 200px;
+    margin-left: 25px;
     margin-top: 30px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
 }

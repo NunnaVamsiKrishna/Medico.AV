@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4fe1c0aab7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title>medico.av</title>
     {% load static %}
 
@@ -11,24 +13,27 @@
 </head>
 <body>
     <div class="home-list">
-        <div class="title">
-                {% if user.is_authenticated %}
-                <li>Hello, {{ user.first_name }}  </li>
-                <a href="{% url 'logoutpage' %}"><button>Logout</button></a>
-
-                {% else %}
-                 <button><a href="{% url 'loginpage' %}">Login</a></button>
-                 {% endif %}
-        </div>
-        <div class="bars"><i class="fa fa-3x fa-bars"></i></div>
+        <div class="bars"></div>
         <ul>
-            <li>Profile</li>
-            <li>Check Symptoms</li>
-            <li>Symptom History</li>
-            <li>Tools</li>
-            <li>Doctors</li>
-            <li>Hospitals</li>
+            <li><i class="fas fa-user-alt"></i> &nbsp; Profile</li>
+            <li><i class="fas fa-heartbeat"></i> &nbsp; Check Symptoms</li>
+            <li><i class="fas fa-file-medical-alt"></i> &nbsp; Symptom History</li>
+            <li><i class="fas fa-syringe"></i> &nbsp; Tools</li>
+            <li><i class="fas fa-user-tie"></i> &nbsp; Doctors</li>
+            <li><i class="fas fa-hospital"></i> &nbsp; Hospitals</li>
         </ul>
+        <div class="dash-title">
+            {% if user.is_authenticated %}
+            <i class="fas fa-user"></i> 
+            <div>
+                <p>{{ user.first_name }} {{ user.last_name }}</p> 
+            </div>
+            <a href="{% url 'logoutpage' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+    
+            {% else %}
+            <button><a href="{% url 'loginpage' %}">Login</a></button>
+             {% endif %}
+        </div>
     </div>
 </body>
 </html>
