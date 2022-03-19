@@ -8,6 +8,9 @@
     height: 100vh;
     background-color: rgb(91, 180, 196);
     float: left;
+    box-shadow: 10px 5px 135px -73px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 10px 5px 135px -73px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 10px 5px 135px -73px rgba(0,0,0,0.75) inset;
 }
 .home-list ul{
     bottom: 30%;

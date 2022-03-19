@@ -16,7 +16,7 @@
         <div class="bars"></div>
         <ul>
             <li><i class="fas fa-user-alt"></i> &nbsp; Profile</li>
-            <li><i class="fas fa-heartbeat"></i> &nbsp; Check Symptoms</li>
+            <a href="{% url 'predictor' %}"><li><i class="fas fa-heartbeat"></i> &nbsp; Check Symptoms</li></a>
             <li><i class="fas fa-file-medical-alt"></i> &nbsp; Symptom History</li>
             <li><i class="fas fa-syringe"></i> &nbsp; Tools</li>
             <li><i class="fas fa-user-tie"></i> &nbsp; Doctors</li>
@@ -35,5 +35,7 @@
              {% endif %}
         </div>
     </div>
+    {% block content %}
+    {% endblock content %}
 </body>
 </html>

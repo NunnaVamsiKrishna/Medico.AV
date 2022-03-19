@@ -16,8 +16,9 @@ Including another URLconf
 from tkinter import N
 from unicodedata import name
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from .views import index,login,signup,dash,logout
+from diseasepredictor import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('signup/',signup,name='signuppage'),
     path('dashboard/',dash,name='dashpage'),
     path('logout/',logout,name='logoutpage'),
+    path('diseaseprediction/', include('diseasepredictor.urls'), name='predictpage'),
 ]
