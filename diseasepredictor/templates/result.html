@@ -1,0 +1,30 @@
+{% extends 'dash.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title>medico.av</title>
+</head>
+<body>
+    {% block content %}
+    <div class="dp-body" style="position: relative; padding: 60px; margin-left: 260px; font-family: 'Fredoka', sans-serif;">
+        <h1 style="padding: 40px;">Welcome to our Disease Prediction System</h1>
+        <p style="font-size: 18px; margin-left: 40px; width: 50%; color: rgb(91, 180, 196); margin-bottom: 20px;">Enter 5 of the symptoms that you're having right now and our AI will try to predict the possibility of a disease you're suffering from. If you have less than 5 symptoms, put the same symptom multiple times. </p>
+        <a href="#" style="position: relative; margin-left: 40px;"> * Terms & Conditions</a>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 50%;">
+                <h3 style="width: 50%; margin-top: 70px; font-size: 24px; margin-left: 40px;">You might have {{disease}}</h3>
+                <a  href="{% url 'predictor' %}"><button style="margin-top: 150px; margin-left: 120px;">Back</button></a>
+            </div>
+            <img src="https://img.freepik.com/free-vector/doctor-giving-advice-patient-online_268404-74.jpg?w=1060" style="position: relative; width: 50%; margin-top: -55px;" />
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

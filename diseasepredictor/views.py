@@ -131,5 +131,6 @@ def result(request):
     disease = predictDisease("{},{},{},{}".format(v1,v2,v3,v4))
 
     disease = str(disease)
+    disease = disease[2:len(disease)-2]+'!'
 
-    return render(request, "dp.html", {"disease":disease})
+    return render(request, "result.html", {"disease":disease})
