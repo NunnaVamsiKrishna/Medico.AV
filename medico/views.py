@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
+from medico.models import Profile
+
 
 def index(request):
     return render(request,"index.html")
@@ -45,6 +48,23 @@ def login(request):
 
   else:
     return render(request, 'login.html')
+@login_required()
+def profile(request):
+    return render(request,"profile.html")
+@login_required()
+def editprofile(request):
+      if request.method == 'POST':
+        user_id=request.POST['user_id']
+        age = request.POST['age']
+        height = request.POST['height']
+        weight = request.POST['weight']
+        city = request.POST['city']
+        address = request.POST['address']
+        mobile = request.POST['mobile']
+        if User.objects.get(username=user_id):
+          ins=Profile(user_id=user_id,age=age,height=height,weight=weight,city=city,address=address,mobile=mobile)
+          ins.save()
+      return render(request,"editprofile.html")
 
 def logout(request):
 	auth.logout(request)

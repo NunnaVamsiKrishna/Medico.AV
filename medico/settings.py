@@ -83,13 +83,24 @@ WSGI_APPLICATION = 'medico.wsgi.application'
 #     }
 # }
 
-DATABASES = {  
+'''DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'doctors',  
+        'NAME': 'customers',  
         'USER':'root',  
         'PASSWORD':'Ankit@25',
         'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
+}'''
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'customers',  
+        'USER':'admin',  
+        'PASSWORD':'Tomandjerry21',
+        'HOST':'test-db.ceaovshm4bpz.us-east-1.rds.amazonaws.com',  
         'PORT':'3306'  
     }  
 }

@@ -1,0 +1,30 @@
+{% extends 'dash.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4fe1c0aab7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>medico.av</title>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    {% block content %}
+    <div class="profile-container" style="position: relative; padding: 60px; margin-left: 260px; font-family: 'Fredoka', sans-serif;">
+      <div class="profile-title" style="margin-top: 40px; font-size: 30px; padding-bottom: 40px;">
+        <h3>Welcome to our profile page!</h3>
+      </div>
+        <div class="head" style="padding: 10px 0;"><h2>Username: {{ user.username }}</h2></div>
+        <div class="head" style="padding: 10px 0;"><h2>First Name: {{ user.first_name }}</h2></div>
+        <div class="head" style="padding: 10px 0;"><h2>Last Name: {{ user.last_name }}</h2></div>
+        <div class="head" style="padding: 10px 0;"><h2>Email: {{ user.email }}</h2></div>
+        <a href="{% url 'editprofilepage' %}" style="margin-left: 60px;"><button>Edit</button></a>
+    </div>
+  {% endblock content %}
+</body>
+</html>
