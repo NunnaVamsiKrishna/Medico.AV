@@ -19,10 +19,12 @@
       <div class="profile-title" style="margin-top: 40px; font-size: 30px; padding-bottom: 40px;">
         <h3>Welcome to our profile page!</h3>
       </div>
-        <div class="head" style="padding: 10px 0;"><h2>Username: {{ user.username }}</h2></div>
-        <div class="head" style="padding: 10px 0;"><h2>First Name: {{ user.first_name }}</h2></div>
-        <div class="head" style="padding: 10px 0;"><h2>Last Name: {{ user.last_name }}</h2></div>
-        <div class="head" style="padding: 10px 0;"><h2>Email: {{ user.email }}</h2></div>
+        <div style="display: flex; flex-wrap: wrap;">
+          <div class="head" style="flex: 50%; margin-bottom: 30px;"><label style="padding: 5px;">Username:<br /><input style="padding: 10px; width: 300px; font-size: 16px;" value="{{ user.username }}" readonly /> </label></div>
+          <div class="head" style="flex: 50%; margin-bottom: 30px;"><label style="padding: 5px;">First Name:<br /><input style="padding: 10px; width: 300px; font-size: 16px;" value="{{ user.first_name }}" readonly /> </label></div>
+          <div class="head" style="flex: 50%; margin-bottom: 30px;"><label style="padding: 5px;">Last Name:<br /><input style="padding: 10px; width: 300px; font-size: 16px;" value="{{ user.last_name }}" readonly /> </label></div>
+          <div class="head" style="flex: 50%; margin-bottom: 30px;"><label style="padding: 5px;">Email:<br /><input style="padding: 10px; width: 300px; font-size: 16px;" value="{{ user.email }}" readonly /> </label></div>
+        </div>
         <a href="{% url 'editprofilepage' %}" style="margin-left: 60px;"><button>Edit</button></a>
     </div>
   {% endblock content %}

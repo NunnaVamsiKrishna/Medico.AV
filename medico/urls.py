@@ -17,7 +17,7 @@ from tkinter import N
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
-from .views import index,login,signup,dash,profile,editprofile,logout
+from .views import index,login,signup,dash,profile,editprofile,logout,search
 from diseasepredictor import views
 
 urlpatterns = [
@@ -27,7 +27,8 @@ urlpatterns = [
     path('signup/',signup,name='signuppage'),
     path('dashboard/',dash,name='dashpage'),
     path('logout/',logout,name='logoutpage'),
-    path('profile/',profile,name='profilepage'),
+    path('search/',search,name='hospitals'),
+    path('profile/<user_id>/',profile,name='profilepage'),
     path('editprofile/',editprofile,name='editprofilepage'),
     path('diseaseprediction/', include('diseasepredictor.urls'), name='predictpage'),
 ]

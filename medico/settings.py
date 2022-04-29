@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'medico.wsgi.application'
 #     }
 # }
 
-'''DATABASES = {  
+DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'customers',  
@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'medico.wsgi.application'
         'HOST':'localhost',  
         'PORT':'3306'  
     }  
-}'''
+}
 
-DATABASES = {  
+'''DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'customers',  
@@ -103,7 +103,7 @@ DATABASES = {
         'HOST':'test-db.ceaovshm4bpz.us-east-1.rds.amazonaws.com',  
         'PORT':'3306'  
     }  
-}
+}'''
 
 
 # Password validation

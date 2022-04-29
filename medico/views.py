@@ -49,8 +49,11 @@ def login(request):
   else:
     return render(request, 'login.html')
 @login_required()
-def profile(request):
-    return render(request,"profile.html")
+def profile(request, user_id):
+  print(user_id)
+  return render(request,"profile.html")
+
+
 @login_required()
 def editprofile(request):
       if request.method == 'POST':
@@ -65,7 +68,11 @@ def editprofile(request):
           ins=Profile(user_id=user_id,age=age,height=height,weight=weight,city=city,address=address,mobile=mobile)
           ins.save()
       return render(request,"editprofile.html")
+    
 
 def logout(request):
 	auth.logout(request)
 	return redirect('/')
+
+def search(request):
+    return render(request,"hospital.html")
